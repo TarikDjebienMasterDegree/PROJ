@@ -1,0 +1,85 @@
+id	summary	reporter	owner	description	type	status	priority	milestone	component	version	resolution	keywords	cc
+3	Configuration SVN Eclipse PostgreSql	djebien	djebien	"Installer eclipse Indigo :
+- http://www.eclipse.org/downloads/packages/eclipse-ide-java-ee-developers/indigosr1
+Installer plugin Eclipse Subversive :
+Update Site is a part of Indigo Update Site. 
+Look at Help > 
+Install New Software... > 
+select Indigo - http://download.eclipse.org/releases/indigo > 
+Collaboration Tools >
+- Cocher les 4 Subversive
+- Accepter le contrat de licence
+- Redémarrer Eclipse
+- Choisir SVN KIT 1.3.5
+- Accepter le contrat de licence et le security warning
+- Redémarrer Eclipse
+Window > Open Perspective > Other...> SVN Repository
+- clicker sur l'icone New repository location
+- Entrer dans l'URL : https://forge.fil.univ-lille1.fr/11miageCRM/svn/
+- Clicker sur Browse
+- Clicker sur Trust Always
+- Entrer votre identifiant et mot de passe du wiki/svn de CRM365
+- Selectionner le ROOT 0 puis OK
+- Laisser Use the repository as the label
+- Entrer votre user login et cliker sur finish
+- Dans secure storage, entrer un password (moi j'ai choisit le meme que celui du wiki/svn) pour protéger l’accès.
+
+Normalment SVN est bien installé et configuré.
+
+Test :
+Aller dans la perspective JAVA EE sur eclipse :
+- click droit sur Project Explorer
+- new > project > 
+- + SVN > Project from SVN
+- Use existing repository location (Normalement le SVN doit apparaître tout seul)
+- Next 
+- Laisser cocher Head Revison
+- Clicker sur finish
+- Sur la fenetre check out as qui apparait, ne changer rien et clicker sur finish.
+- Ensuite choisir Java Project
+- Indiquer votre Workspace/CRM365
+- Clicker sur finish
+- Il va vous demander si vous souhaitez ouvrir la perspective java clicker sur oui
+- A ce stade vous devez voir votre projet dans Package explorer
+  comme sur l'image associé au ticket
+
+- Clik droit sur le projet CRM365
+- Team > Synchronize with repository
+- Accepter d'ouvrir la perspective SVN
+- Clicker sur l'icone de la fleche bleu (la plus a gauche)
+- Vous devez voir qu'un fichier HelloCRM365 a été ajouté.
+- Faite un update sur ce fichier 
+- Ouvrer le
+- Comme je travaille sous linux, normalement vous devez voir que l'accent
+  ""é"" n'est pas passer à cause de l'encodage des caractères pour vous rappeler qu'il ne faut pas mettre d'accent.
+- Ajouter votre nom et prénom
+- Faite un clik droit sur le projet
+- synchronize with repository > flêche grise (pour voir ce que vous avez ajouter)
+- puis faite un commit uniquement sur le fichier HelloCRM365
+
+NE JAMAIS COMMITER TOUT LE PROJET (sinon il va inclure vos propre fichier de configuration eclipse .classpath . project) et cela risque de faire des conflits
+
+- Vérifier dans un navigateur que le fichier est bien présent sur l'URL
+https://forge.fil.univ-lille1.fr/11miageCRM/svn/HelloCRM365
+
+
+Installer postgresql 9.0.6 :
+http://www.enterprisedb.com/products-services-training/pgdownload.
+
+Telecharger Tomcat 6.0.35 :
+http://tomcat.apache.org/download-60.cgi
+
+Telecharger le plugin Tomcat pour eclipse tomcatPluginV321.zip :
+http://www.eclipsetotale.com/tomcatPlugin.html#A3
+
+Une fois le plug-in téléchargé, il vous suffit de dézipper l'archive et de coller le dossier que celle-ci contenait dans le dossier ""plugins"" présent dans le dossier d'installation d'Eclipse !
+
+Configurer le plugin Tomcat dans Eclipse (Windows>preferences>tomcat) :
+- choisir tomcat 6.XX.XX 
+- faire pointer le dossier ou se trouve tomcat
+- CLicker sur OK 
+
+Pour toutes questions, je suis à votre écoute.
+
+Pour plus d'infos :
+http://www.eclipse.org/subversive/documentation/gettingStarted/aboutSubversive/install.php"	task	new	major	PROTO	component1	1.0		Installation-Configuration	

@@ -1,0 +1,44 @@
+Scénario démo :
+1. Expliquer le contexte jeu d'entreprise
+  - entreprise vente bateaux
+  - 3 types de bateaux
+  - besoin adapter à chaque client a ce qui se passe
+
+2. Faire comprendre la valeur ajoutée de l'application en présentant le besoin et comment l'application y répond
+  - expliquer ce qu'on aimerait faire : les action-trigger
+  - expliquer qu'on a aussi des contraintes sur la personnalisation client en fonction de notre entreprise : profil acheteur
+  - expliquer les event-type/event-parameter pour structure ce qui se passe niveau client : événement sur lequel on attache des informations qui seront remplies par l'utilisateur
+  - montrer que CRM répond à ce besoin de supervision client
+
+3. Configuration event / action
+  - configurer l'action et action-trigger en commentaires dans le script sql
+  - montrer toutes les actions configurées dans l'appli
+  - configurer l'évent et ses paramètres en commentaires dans le script sql
+  - montrer tous les évents configurées dans l'appli
+
+4. Monter la configuration de la personnalisation client, dire partie admin pour gérer users/rôles et à quelle équipe un user appartient
+  - montrer la page de perso client : ajouter une ligne "profil client"
+  - données préconfigurées pour partie administration, expliquer notion rôle technique à l'appli et team fonctionnel, donner ex
+  - montrer page admin user sans faire d'actions
+  - montrer page admin team sans faire d'actions
+
+5. Declenchement action concernant un action-trigger et un customer-trigger
+  - montrer la page de chargement fichier et clic sur onglet download template, ne pas clicker
+  - saisir les événements qui permettront de générer l'action choisie
+  - saisir la valeur de customisation client profil client pour générer action
+
+8. Generation
+  - Appuyer sur bouton generate tasks, dire que automatisé toutes les 30 minutes
+
+9. Workflow
+  - Aller sur la page d'actions à réaliser
+  - montrer les actions générées
+  - cliquer sur client pour montrer chargement partie droite
+  - Réserver une tâche
+  - Faire done sur une tache
+
+11. Présenter la partie reporting event, préciser qu'une action génère un event
+
+12. Présenter la partie reporting action
+
+13. Conclure en disant qu'une fois configurée, c'est un workflow entre récupération d'événements, générations d'actions en fonction de critères et traitement des actions

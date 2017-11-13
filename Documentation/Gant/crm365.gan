@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="CRM365 (PROTO et Sprint1)" company="MIAGE FA 2012" webLink="https://forge.fil.univ-lille1.fr/11miageCRM/" view-date="2012-01-29" view-index="0" gantt-divider-location="426" resource-divider-location="322" version="2.0">
+    <description><![CDATA[CRM 365 est une application récupérant des événements centrés client de sources manuelles saisis par le personnel dédié à la vente, d’applications internes à l’entreprise et de réseaux sociaux. 
+L’intêret des événements récupérés est double : construction de statistiques et configuration d’actions. ]]></description>
+    <view zooming-state="default:1" id="gantt-chart"/>
+    <view id="resource-table">
+        <field id="0" name="Nom" width="54" order="0"/>
+        <field id="1" name="Rôle par défaut" width="45" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <calendar id="1" name="default">
+                <default-week sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+                <overriden-day-types/>
+                <days/>
+            </calendar>
+        </day-types>
+    </calendars>
+    <tasks color="#eeeeee">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="0" name="PROTO" color="#8cb6ce" meeting="false" start="2012-01-30" duration="14" complete="0" priority="2" expand="true">
+            <notes><![CDATA[Prototype de l’application avec accès web à 2 pages :
+- page d’authentification
+- page accueil
+ 
+Composants et framework de base intégrés pour valider leur intégration]]></notes>
+            <task id="1" name="installation" color="#8cb6ce" meeting="false" start="2012-01-30" duration="1" complete="1" priority="1" expand="true">
+                <notes><![CDATA[Installation et configuration de l'environnement:
+- Eclipse IDE
+- SGBD postgresql
+- Tomcat
+- Plugin Tomcat sysdeo eclipse
+- Maven 2
+- Plugin maven m2e eclipse]]></notes>
+                <depend id="2" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="2" name="integration Framework Serveur" color="#8cb6ce" meeting="false" start="2012-01-31" duration="1" complete="0" priority="1" expand="true">
+                <notes><![CDATA[Integration framework Serveur Spring 3 :
+- Spring IOC
+- Spring MVC
+- Spring Security
+- Spring JDBC]]></notes>
+                <depend id="3" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="3" name="Developpement" color="#8cb6ce" meeting="false" start="2012-02-01" duration="9" complete="0" priority="1" expand="true">
+                <notes><![CDATA[Developpement :
+- page d’authentification
+- page accueil]]></notes>
+                <depend id="5" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="5" name="Test" color="#8cb6ce" meeting="false" start="2012-02-14" duration="2" complete="0" priority="1" expand="true">
+                <notes><![CDATA[Test unitaire ]]></notes>
+                <depend id="4" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="4" name="Deploiement" color="#8cb6ce" meeting="false" start="2012-02-16" duration="1" complete="0" priority="1" expand="true">
+                <notes><![CDATA[Deploiement sur serveur application distant]]></notes>
+                <depend id="7" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="14" name="Formation technique" color="#8cb6ce" meeting="false" start="2012-01-30" duration="14" complete="0" priority="1" expand="true">
+                <notes><![CDATA[Auto-formation sur :
+- JEE
+- Spring IOC
+- Spring MVC
+- Spring JDBC
+- Spring Security]]></notes>
+                <depend id="15" type="2" difference="0" hardness="Strong"/>
+            </task>
+        </task>
+        <task id="6" name="Sprint 1" color="#8cb6ce" meeting="false" start="2012-02-17" duration="10" complete="0" priority="1" expand="true">
+            <notes><![CDATA[Premier Sprint agile :
+- durée : 2 semaines
+- But : se concentrer sur les tâches critiques de l'application pour en dégager le plus rapidement possible les difficultés techniques. ]]></notes>
+            <task id="7" name="integration Framework Client" color="#8cb6ce" meeting="false" start="2012-02-17" duration="1" complete="0" priority="1" expand="true">
+                <notes><![CDATA[Integration Framework Web 2.0 JQuery ]]></notes>
+                <depend id="11" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="11" name="Developpement" color="#8cb6ce" meeting="false" start="2012-02-20" duration="6" complete="0" priority="1" expand="true">
+                <notes><![CDATA[Developpement :
+M - Les premiers DAOs (Data Access Object)   
+V - Les premières vues Java Server Pages (JSPs)
+C - Les premiers controller de requête cliente HTTP
+S - Le premier service ( parseur CSV )]]></notes>
+                <depend id="12" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="12" name="Test" color="#8cb6ce" meeting="false" start="2012-02-28" duration="2" complete="0" priority="1" expand="true">
+                <notes><![CDATA[Test unitaire JUNIT4]]></notes>
+                <depend id="13" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="13" name="Deploiement" color="#8cb6ce" meeting="false" start="2012-03-01" duration="1" complete="0" priority="1" expand="true">
+                <notes><![CDATA[Deploiement sur le serveur d'application distant
+Generation documentation/packaging]]></notes>
+            </task>
+            <task id="15" name="Formation technique" color="#8cb6ce" meeting="false" start="2012-02-17" duration="10" complete="0" priority="1" expand="true">
+                <notes><![CDATA[Auto-formation JQuery/JavaScript]]></notes>
+            </task>
+        </task>
+    </tasks>
+    <resources>
+        <resource id="0" name="Djebien" function="SoftwareDevelopment:2" contacts="tarik.djebien@gmail.com" phone="0602084986"/>
+        <resource id="1" name="Craske" function="SoftwareDevelopment:2" contacts="antoine_craske@hotmail.com" phone="+33 6 79 22 70 42"/>
+        <resource id="2" name="Rakotobe" function="SoftwareDevelopment:2" contacts="rsitrakaeric@yahoo.fr" phone="06 12 02 38 23"/>
+        <resource id="3" name="Stienne" function="SoftwareDevelopment:2" contacts="rudy.stienne@gmail.com" phone="06 22 73 15 86"/>
+    </resources>
+    <allocations>
+        <allocation task-id="0" resource-id="1" function="Default:1" responsible="true" load="17.0"/>
+        <allocation task-id="0" resource-id="3" function="SoftwareDevelopment:2" responsible="false" load="17.0"/>
+        <allocation task-id="0" resource-id="2" function="SoftwareDevelopment:2" responsible="false" load="17.0"/>
+        <allocation task-id="0" resource-id="0" function="SoftwareDevelopment:2" responsible="false" load="17.0"/>
+        <allocation task-id="1" resource-id="1" function="Default:1" responsible="true" load="1.0"/>
+        <allocation task-id="1" resource-id="0" function="SoftwareDevelopment:2" responsible="true" load="1.0"/>
+        <allocation task-id="2" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="1.0"/>
+        <allocation task-id="2" resource-id="0" function="SoftwareDevelopment:2" responsible="true" load="1.0"/>
+        <allocation task-id="3" resource-id="3" function="SoftwareDevelopment:2" responsible="true" load="14.0"/>
+        <allocation task-id="3" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="14.0"/>
+        <allocation task-id="3" resource-id="0" function="SoftwareDevelopment:2" responsible="true" load="14.0"/>
+        <allocation task-id="5" resource-id="1" function="Default:1" responsible="true" load="3.0"/>
+        <allocation task-id="5" resource-id="3" function="SoftwareDevelopment:2" responsible="true" load="3.0"/>
+        <allocation task-id="5" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="3.0"/>
+        <allocation task-id="4" resource-id="1" function="Default:1" responsible="true" load="1.0"/>
+        <allocation task-id="4" resource-id="0" function="SoftwareDevelopment:2" responsible="false" load="1.0"/>
+        <allocation task-id="14" resource-id="1" function="SoftwareDevelopment:2" responsible="true" load="17.0"/>
+        <allocation task-id="14" resource-id="3" function="SoftwareDevelopment:2" responsible="true" load="17.0"/>
+        <allocation task-id="6" resource-id="1" function="SoftwareDevelopment:2" responsible="false" load="15.0"/>
+        <allocation task-id="6" resource-id="3" function="SoftwareDevelopment:2" responsible="false" load="15.0"/>
+        <allocation task-id="6" resource-id="2" function="SoftwareDevelopment:2" responsible="false" load="15.0"/>
+        <allocation task-id="6" resource-id="0" function="Default:1" responsible="true" load="15.0"/>
+        <allocation task-id="7" resource-id="1" function="SoftwareDevelopment:2" responsible="true" load="1.0"/>
+        <allocation task-id="7" resource-id="3" function="SoftwareDevelopment:2" responsible="true" load="1.0"/>
+        <allocation task-id="7" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="1.0"/>
+        <allocation task-id="11" resource-id="1" function="SoftwareDevelopment:2" responsible="true" load="8.0"/>
+        <allocation task-id="11" resource-id="3" function="SoftwareDevelopment:2" responsible="true" load="8.0"/>
+        <allocation task-id="11" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="8.0"/>
+        <allocation task-id="11" resource-id="0" function="Default:1" responsible="true" load="8.0"/>
+        <allocation task-id="12" resource-id="3" function="SoftwareDevelopment:2" responsible="true" load="3.0"/>
+        <allocation task-id="12" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="3.0"/>
+        <allocation task-id="13" resource-id="1" function="SoftwareDevelopment:2" responsible="true" load="2.0"/>
+        <allocation task-id="15" resource-id="1" function="SoftwareDevelopment:2" responsible="true" load="14.0"/>
+        <allocation task-id="15" resource-id="3" function="SoftwareDevelopment:2" responsible="true" load="14.0"/>
+        <allocation task-id="15" resource-id="2" function="SoftwareDevelopment:2" responsible="true" load="14.0"/>
+        <allocation task-id="15" resource-id="0" function="SoftwareDevelopment:2" responsible="true" load="14.0"/>
+    </allocations>
+    <vacations/>
+    <taskdisplaycolumns>
+        <displaycolumn property-id="tpd3" order="0" width="167"/>
+        <displaycolumn property-id="tpd4" order="1" width="40"/>
+        <displaycolumn property-id="tpd5" order="2" width="18"/>
+    </taskdisplaycolumns>
+    <previous/>
+    <roles roleset-name="Default"/>
+    <roles roleset-name="SoftwareDevelopment"/>
+</project>

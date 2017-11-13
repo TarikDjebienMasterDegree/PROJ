@@ -1,0 +1,25 @@
+Configurer Eclipse pour déployer automatiquement l'application
+
+Pré-requis : plugin tomcat installé sous eclipse.
+
+Copier le Devloader.zip dans <Eclipse_HOME>/plugins/com…sysdeo/Devloader.zip
+Le renommer en Devloader.jar
+Placer le Devloader.jar dans <Tomcat_HOME>/lib
+Update le fichier de configuration/crm365-server.xml sur le SVN Modifier les chemins en dur pour les faire pointer sur vos répertoires.
+Dans Eclipse / Preferences / Tomcat
+Cocher la case dans server et faire pointer vers configuration/crm365-server.xml
+
+Dans les propriétés du projet,
+Cocher "Est un projet tomcat"
+Cocher "Mettre a jour le projet automatiquement dans l'onglet général"
+Renseigner le contexte "/crm365" s'il ne l'est pas
+Onglet "Devloader"
+Cocher "Activer devloader", 
+Sélectionner tout les JAR sauf :
+JSP et Servlet qui existe deja dans Tomcat 
+décocher les test en 2eme position
+classpath de Maven en dernière position
+Lancer Tomcat avec le plugin, on voit alors le chargement de tout les jar
+Accéder à l'application sur localhost:8080/crm365
+Modifier login.jsp puis recharger le naviguateur pour voir si la modification est prise en compte
+Ca fonctionne !

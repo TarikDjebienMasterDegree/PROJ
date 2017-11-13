@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="SUICA Project" company="" webLink="http://" view-date="2012-12-10" view-index="2" gantt-divider-location="317" resource-divider-location="316" version="2.0">
+    <description/>
+    <view zooming-state="default:6" id="gantt-chart"/>
+    <view id="resource-table">
+        <field id="0" name="Nom" width="61" order="0"/>
+        <field id="1" name="Rôle par défaut" width="38" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <calendar id="1" name="default">
+                <default-week sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+                <overriden-day-types/>
+                <days/>
+            </calendar>
+        </day-types>
+    </calendars>
+    <tasks color="#eeeeee">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="0" name="Lancement du projet" color="#eeeeee" meeting="false" start="2013-01-07" duration="9" complete="0" thirdDate="2013-01-07" thirdDate-constraint="1" priority="1" expand="true">
+            <depend id="1" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="1" name="Analyse, Conception" color="#eeeeee" meeting="false" start="2013-01-18" duration="26" complete="0" priority="1" expand="true">
+            <depend id="2" type="2" difference="0" hardness="Strong"/>
+            <depend id="6" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="2" name="Réalisation" color="#eeeeee" meeting="false" start="2013-02-25" duration="43" complete="0" priority="1" expand="true">
+            <depend id="3" type="2" difference="0" hardness="Strong"/>
+            <depend id="5" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="3" name="Tests d'intégration au SI client" color="#eeeeee" meeting="false" start="2013-04-25" duration="13" complete="0" priority="1" expand="true">
+            <depend id="4" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="4" name="Recette" color="#eeeeee" meeting="false" start="2013-05-14" duration="20" complete="0" priority="1" expand="true"/>
+        <task id="5" name="Documentation" color="#eeeeee" meeting="false" start="2013-04-25" duration="17" complete="0" priority="1" expand="true">
+            <depend id="7" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="7" name="Assurance qualité" color="#eeeeee" meeting="false" start="2013-05-20" duration="17" complete="0" priority="1" expand="true"/>
+        <task id="6" name="Pilotage du projet" color="#eeeeee" meeting="false" start="2013-02-25" duration="46" complete="0" priority="1" expand="true"/>
+    </tasks>
+    <resources>
+        <resource id="0" name="Djebien Tarik" function="Default:1" contacts="" phone=""/>
+        <resource id="1" name="Architecte" function="SoftwareDevelopment:8" contacts="" phone=""/>
+        <resource id="2" name="Responsable fonctionnel" function="SoftwareDevelopment:7" contacts="" phone=""/>
+        <resource id="3" name="Dev1" function="SoftwareDevelopment:2" contacts="" phone=""/>
+        <resource id="4" name="Dev2" function="SoftwareDevelopment:2" contacts="" phone=""/>
+    </resources>
+    <allocations>
+        <allocation task-id="0" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="1" resource-id="1" function="SoftwareDevelopment:8" responsible="true" load="50.0"/>
+        <allocation task-id="1" resource-id="2" function="SoftwareDevelopment:7" responsible="true" load="50.0"/>
+        <allocation task-id="2" resource-id="3" function="SoftwareDevelopment:2" responsible="true" load="25.0"/>
+        <allocation task-id="2" resource-id="4" function="SoftwareDevelopment:2" responsible="true" load="25.0"/>
+        <allocation task-id="2" resource-id="1" function="SoftwareDevelopment:8" responsible="true" load="25.0"/>
+        <allocation task-id="2" resource-id="2" function="SoftwareDevelopment:7" responsible="true" load="25.0"/>
+        <allocation task-id="3" resource-id="4" function="SoftwareDevelopment:2" responsible="true" load="50.0"/>
+        <allocation task-id="3" resource-id="1" function="SoftwareDevelopment:8" responsible="true" load="50.0"/>
+        <allocation task-id="4" resource-id="4" function="SoftwareDevelopment:2" responsible="true" load="100.0"/>
+        <allocation task-id="5" resource-id="3" function="SoftwareDevelopment:2" responsible="true" load="50.0"/>
+        <allocation task-id="5" resource-id="2" function="SoftwareDevelopment:7" responsible="true" load="50.0"/>
+        <allocation task-id="6" resource-id="0" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="7" resource-id="2" function="SoftwareDevelopment:7" responsible="true" load="100.0"/>
+    </allocations>
+    <vacations>
+        <vacation start="2013-05-27" end="2013-05-29" resourceid="0"/>
+        <vacation start="2013-02-19" end="2013-02-21" resourceid="1"/>
+        <vacation start="2013-03-11" end="2013-03-13" resourceid="2"/>
+        <vacation start="2013-02-11" end="2013-02-12" resourceid="3"/>
+        <vacation start="2013-06-18" end="2013-06-18" resourceid="3"/>
+        <vacation start="2013-01-25" end="2013-01-25" resourceid="4"/>
+        <vacation start="2013-02-21" end="2013-02-22" resourceid="4"/>
+    </vacations>
+    <taskdisplaycolumns>
+        <displaycolumn property-id="tpd3" order="0" width="216"/>
+        <displaycolumn property-id="tpd4" order="1" width="64"/>
+        <displaycolumn property-id="tpd5" order="2" width="63"/>
+    </taskdisplaycolumns>
+    <previous/>
+    <roles roleset-name="Default"/>
+    <roles roleset-name="SoftwareDevelopment"/>
+</project>
